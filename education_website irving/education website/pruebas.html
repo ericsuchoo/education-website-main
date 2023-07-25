@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cambiar el valor de un input tipo reset</title>
+</head>
+<body>
+  <form id="miFormulario">
+    <label for="miInput">Ingresa un valor:</label>
+    <input type="text" id="miInput" value="Valor inicial">
+    <input type="reset" value="Restaurar">
+  </form>
+  <button class="button button--fenrir">
+    <svg aria-hidden="true" class="progress" width="70" height="70" viewbox="0 0 70 70">
+      <path class="progress__circle" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z" />
+      <path class="progress__path" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z" pathLength="1" />
+    </svg>
+    <span>Go</span>
+  </button>
+
+  <script>
+    const miFormulario = document.getElementById("miFormulario");
+    const miInput = document.getElementById("miInput");
+
+    miFormulario.addEventListener("reset", function() {
+      // Cambiar el valor del input después del reset, después de un pequeño retraso
+      setTimeout(function() {
+        miInput.value = "Nuevo valor";
+      }, 10);
+    });
+  </script>
+</body>
+</html>
